@@ -25,14 +25,14 @@
         <p>{{ note.doc.body }}</p>
       </div>
 
-      <div class="popup" :class="{visible: editing}">
-        <div class="popup-body">
+      <div class="form" :class="{visible: editing}">
+        <div class="form-body">
           <h3>Create/Edit Note</h3>
-          <img src="delete.svg" class="delete" v-if="currentNote._id" @click="remove()"/>
+           <button type="button" class="danger" @click="remove">delete</button>
           <hr/>
           <form>
             <div class="input-group">
-              <label for="title">Note title</label>
+              <label for="title">Note<br>Title</label>
               <input type="text" id="title" name="title" v-model="currentNote.title" />
             </div>
             <div class="input-group">
